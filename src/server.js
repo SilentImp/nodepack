@@ -1,23 +1,23 @@
 import 'babel-polyfill';
-import restify from 'restify';
+import React from "react";
+import { renderToString } from "react-dom/server";
 
-const server = restify.createServer();
-server.get({
-  path: '/',
-  name: 'Test answer',
-},  async (req, res, next) => {
-  res.status(200);
-  res.send('OK');
-  res.end();
-  return next();
+import ExamplePage from 'shared/components/example/index';
+
+const queryString = require('query-string');
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', 'shared/template');
+
+app.get('/', (req, res) => {
+
+  const page = renderToString(<ExamplePage/>);
+
+  res.render('index', { page });
 });
 
-const PORT = process.env.PORT || 3050;
-(async () => {
-  console.log(`Server work on http://localhost:${PORT}`); // eslint-disable-line
-  try {
-    server.listen(PORT);
-  } catch (error) {
-    console.log(error); // eslint-disable-line
-  }
-})();
+
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))

@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const projectPath = path.resolve(__dirname);
+const webpack = require('webpack');
 
 module.exports = {
   target: 'node',
@@ -25,6 +25,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader',
         exclude: /node_modules/,
       },
     ],
