@@ -1,12 +1,15 @@
+const AssetsPlugin = require('assets-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const path = require('path');
 const projectPath = path.resolve(__dirname);
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const window = global = {};
 
 module.exports = {
   target: 'node',
   entry: {
-    server: ['babel-polyfill', './src/server.js']
+    client: ['babel-polyfill', './src/client.js']
   },
   output: {
     path: path.resolve(projectPath, 'build'),
@@ -18,6 +21,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
       path.resolve(projectPath, 'src'),
+      path.resolve(projectPath, 'src/shared'),
+      path.resolve(projectPath, 'src/shared/components'),
       path.resolve(projectPath, 'node_modules')],
   },
   plugins: [
@@ -26,16 +31,13 @@ module.exports = {
         NODE_ENV: JSON.stringify("development")
       }
     }),
-    new CopyWebpackPlugin([
-      {from:'src/static', to:''}
-    ]),
+    new AssetsPlugin({path: path.resolve(projectPath, 'build')}),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async',
+    }),
   ],
   module: {
     rules: [
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
       {
         test: /\.css$/,
         use: [
