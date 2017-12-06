@@ -4,16 +4,43 @@
   "description": "just test",
   "main": "index.js",
   "scripts": {
-    "start": "node ./build/server.js",
-    "clean": "rimraf ./build",
-    "build": "npm-run-all build:*",
-    "build:client": "webpack --config ./webpack.config.js --env=development --debug --progress --profile --colors",
-    "build:server": "webpack --config ./webpack.server.config.js --env=development --debug --progress --profile --colors"
+    "clean": "rimraf build public",
+    "start": "export NODE_ENV=local && webpack-dev-server",
+    "build": "npm run clean && export NODE_ENV=production && npm-run-all build:production:*",
+    "build:production:client": "webpack -p --config ./webpack.config.js --env=production --progress --colors --display-reasons --verbose --display-chunks",
+    "build:production:server": "webpack -p --config ./webpack.server.config.js --env=production --progress --colors --display-reasons --verbose --display-chunks",
+    "build:dev": "npm run clean && export NODE_ENV=dev && npm-run-all build:dev:*",
+    "build:dev:client": "webpack --config ./webpack.config.js --env=dev --progress --debug --colors --display-reasons --verbose --display-chunks",
+    "build:dev:server": "webpack --config ./webpack.server.config.js --env=dev --progress --debug --colors --display-reasons --verbose --display-chunks",
+    "build:local": "npm run clean && export NODE_ENV=local && npm-run-all build:local:*",
+    "build:local:client": "webpack --config ./webpack.config.js --env=local --progress --debug --colors --display-reasons --verbose --display-chunks",
+    "build:local:server": "webpack --config ./webpack.server.config.js --env=local --progress --debug --colors --display-reasons --verbose --display-chunks",
+    "build:doc": "documentation build src/*.js* -o public -f html",
+    "test": "export NODE_ENV=test && jest --no-cache",
+    "test:watch": "export NODE_ENV=test && jest --no-cache --watch",
+    "test:coverage": "export NODE_ENV=test && jest --no-cache --coverage",
+    "lint": "npm run format && npm-run-all lint:*",
+    "lint:js": "eslint ./src/** --ext .jsx,.js --color -f stylish --fix",
+    "lint:css": "stylelint './src/**/*.pcss' --color -r -f verbose --fix",
+    "lint:doc": "documentation lint src/**/*.js*",
+    "precommit": "git add . -A && lint-staged",
+    "commitmsg": "commit-msg ${GIT_PARAMS}"
+  },
+  "lint-staged": {
+    "*.{jsx,js}": [
+      "eslint --color -f stylish --fix",
+      "git add"
+    ],
+    "*.pcss": [
+      "stylelint --color -r -f verbose --fix",
+      "git add"
+    ]
   },
   "author": "Anton Nemtsev <thesilentimp@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@plasma-platform/tm-css": "^1.0.10",
+    "@plasma-platform/tm-message-hook": "^2.0.11",
     "assets-webpack-plugin": "^3.5.1",
     "autoprefixer": "^7.2.1",
     "babel-cli": "^6.26.0",
@@ -32,6 +59,7 @@
     "file-loader": "^1.1.5",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
+    "husky": "^0.14.3",
     "i18next": "^10.2.1",
     "i18next-browser-languagedetector": "^2.1.0",
     "i18next-localstorage-cache": "^1.1.1",
@@ -39,6 +67,7 @@
     "i18next-xhr-backend": "^1.5.0",
     "isomorphic-style-loader": "^4.0.0",
     "json-loader": "^0.5.7",
+    "lint-staged": "^6.0.0",
     "npm-run-all": "^4.1.2",
     "postcss-conditionals": "^2.1.0",
     "postcss-import": "^11.0.0",
@@ -69,6 +98,7 @@
     "svg-sprite-loader": "^3.4.1",
     "svgo": "^1.0.3",
     "svgo-loader": "^2.1.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.6.0",
     "webpack-merge": "^4.1.1"
   },

@@ -5,6 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import DocumentTitle from 'react-document-title';
 import Icon from 'Components/Icon';
 import * as actions from 'actions/';
+import Config from 'Config';
 
 import './monoicon/resume.svg';
 import styles from './ExamplePage.pcss';
@@ -32,6 +33,7 @@ class ExamplePage extends Component {
           <h1 className={styles.ExamplePage__title}>
             <Icon icon="resume" />
             {t('Example')}
+            so: {Config.test}
           </h1>
         </section>
       </DocumentTitle>

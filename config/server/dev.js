@@ -1,16 +1,17 @@
 const webpack = require('webpack');
 const path = require('path');
+
 const projectPath = path.resolve(__dirname, '../../');
 
 module.exports = {
   entry: {
-    client: ['babel-polyfill', './src/client/client.jsx']
+    server: ['babel-polyfill', './src/server/server.jsx']
   },
   output: {
     path: path.resolve(projectPath, 'build'),
     publicPath: '/',
     chunkFilename: '[name]-[hash].chunk.js',
-    filename: '[name]-[hash].bundle.js',
+    filename: '[name].js',
   },
   plugins: [
     new webpack.DefinePlugin({
