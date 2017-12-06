@@ -4,6 +4,9 @@ const projectPath = path.resolve(__dirname, '../../');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const env = process.env.NODE_ENV || 'dev';
+const envAppConfigURL = path.resolve(__dirname, `../app/${env}.js`);
+
 module.exports = {
   target: 'node',
   entry: {
@@ -18,6 +21,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
+      Config: fs.existsSync(envAppConfigURL) ? envAppConfigURL : path.resolve(__dirname, 'dev.js'),
       Utils: path.resolve(projectPath, 'src/shared/utils/index.js'),
       Components: path.resolve(projectPath, 'src/shared/components/'),
       Images: path.resolve(projectPath, 'src/shared/assets/images/'),

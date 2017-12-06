@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 
 export class App extends Component {
+
   static propTypes = {
     children: PropTypes.node.isRequired,
     i18n: PropTypes.shape({
@@ -12,6 +13,7 @@ export class App extends Component {
   };
 
   static childContextTypes = {
+    insertCss: PropTypes.func,
     i18n: PropTypes.shape({
       changeLanguage: PropTypes.func.isRequired,
     }).isRequired,
@@ -26,6 +28,7 @@ export class App extends Component {
     return {
       t: this.props.t,
       i18n: this.props.i18n,
+      ...this.props.context
     };
   }
 
