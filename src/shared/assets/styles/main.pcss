@@ -1,0 +1,68 @@
+@import './fonts.pcss';
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #243238;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.25px;
+  word-spacing: 0.65px;
+  width: 100%;
+}
+
+.font body {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:focus {
+  outline: none;
+  -moz-outline-style: none;
+}
+
+[type='button']:-moz-focusring {
+  outline: 0;
+}

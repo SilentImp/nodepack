@@ -12,7 +12,7 @@
   ],
   "plugins": [
     "transform-decorators-legacy",
-    "syntax-dynamic-import",
+    "syntax-dynamic-import"
   ],
   "env": {
     "test": {

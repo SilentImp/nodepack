@@ -1,65 +1,12 @@
-const path = require('path');
-const projectPath = path.resolve(__dirname);
-const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const fs = require('fs');
+const merge = require('webpack-merge');
+const devConfig = require('./config/server/dev.js');
+const baseConfig = require('./config/server/base.js');
 
-module.exports = {
-  target: 'node',
-  entry: {
-    server: ['babel-polyfill', './src/server.js']
-  },
-  output: {
-    path: path.resolve(projectPath, 'build'),
-    publicPath: '',
-    chunkFilename: '[name].chunk.js',
-    filename: '[name].js',
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    modules: [
-      path.resolve(projectPath, 'src'),
-      path.resolve(projectPath, 'node_modules')],
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("development")
-      }
-    }),
-    new CopyWebpackPlugin([
-      {from:'src/static', to:''}
-    ]),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'isomorphic-style-loader',
-          {
-             loader: 'css-loader',
-             options: {
-               modules: true,
-               importLoaders: 1,
-               localIdentName: '[name]--[hash:base64:5]'
-             }
-          }
-        ]
-      },
-      {
-        test: /\.jsx?$/,
-        use: 'babel-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.pug$/,
-        use: 'pug-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-};
+const env = process.env.NODE_ENV || 'dev';
+const envConfigURL = `./config/server/${env}.js`;
+const envConfig = fs.existsSync(envConfigURL) // eslint-disable-next-line import/no-dynamic-require
+  ? require(envConfigURL)
+  : devConfig; // eslint-disable-line global-require import/no-dynamic-require
+
+module.exports = merge(baseConfig, envConfig);
