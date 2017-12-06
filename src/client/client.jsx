@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { createBrowserHistory as createHistory } from 'history';
 import 'reset.css';
+
 import '../shared/assets/styles/main.pcss';
 import store from '../shared/store';
 import i18n from '../shared/i18n';
-
-const history = createHistory();
-
 import Root from '../shared/Root';
 import ContextProvider from '../shared/components/ContextProvider/index'
+
+const history = createHistory();
 
 const context = {
   insertCss: (...styles) => {

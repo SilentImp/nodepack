@@ -3,9 +3,12 @@ const path = require('path');
 const projectPath = path.resolve(__dirname, '../../');
 
 module.exports = {
-  entry: {
-    client: ['babel-polyfill', './src/client/client.jsx']
-  },
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?https://0.0.0.0:8080',
+    './src/client/client.jsx'
+  ],
   output: {
     path: path.resolve(projectPath, 'build'),
     publicPath: '/',
@@ -15,7 +18,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("dev")
+        NODE_ENV: JSON.stringify("local")
       }
     }),
   ],

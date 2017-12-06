@@ -9,7 +9,7 @@ export const composeEnhancers = () => {
     return compose(applyMiddleware(thunkMiddleware));
   }
 
-  return compose(applyMiddleware(thunkMiddleware), window[devTools]());
+  return compose(applyMiddleware(thunkMiddleware), window.devToolsExtension ? window.devToolsExtension() : (f) => f);
 };
 
 export const configureStore = () => createStore(rootReducer, composeEnhancers());

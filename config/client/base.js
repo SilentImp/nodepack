@@ -1,24 +1,16 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const fs = require('fs');
+const webpack = require('webpack');
 const path = require('path');
 const projectPath = path.resolve(__dirname, '../../');
-const webpack = require('webpack');
 
 const env = process.env.NODE_ENV || 'dev';
 const envAppConfigURL = path.resolve(__dirname, `../app/${env}.js`);
 
 module.exports = {
   target: 'web',
-  entry: {
-    client: ['babel-polyfill', './src/client/client.js']
-  },
-  output: {
-    path: path.resolve(projectPath, 'build'),
-    publicPath: '/',
-    chunkFilename: '[name]-[hash].chunk.js',
-    filename: '[name]-[hash].bundle.js',
-  },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
@@ -36,9 +28,17 @@ module.exports = {
       path.resolve(projectPath, 'node_modules')],
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+    }),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      syntax: 'scss',
+    }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development")
+        "IS_SERVER": false
       }
     }),
     new AssetsPlugin({path: path.resolve(projectPath, 'build')}),
@@ -47,6 +47,12 @@ module.exports = {
     }),
   ],
   module: {
+    // Disable handling of requires with a single expression
+    exprContextRegExp: /$^/,
+    exprContextCritical: false,
+    // Disable handling of requires with expression wrapped by string,
+    wrappedContextRegExp: /$^/,
+    wrappedContextCritical: false,
     rules: [
       {
         test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/,

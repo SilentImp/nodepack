@@ -5,7 +5,7 @@ import { translate } from 'react-i18next';
 export class App extends Component {
 
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     i18n: PropTypes.shape({
       changeLanguage: PropTypes.func.isRequired,
     }).isRequired,
@@ -28,7 +28,6 @@ export class App extends Component {
     return {
       t: this.props.t,
       i18n: this.props.i18n,
-      ...this.props.context
     };
   }
 
