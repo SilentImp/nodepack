@@ -25,25 +25,20 @@ const context = {
   },
 }
 
-ReactDOM.hydrate(
+const renderArgs = [
   <AppContainer>
     <ContextProvider context={context}>
       <Root store={store} history={history} i18n={i18n} />
     </ContextProvider>
   </AppContainer>,
   document.getElementById('root'),
-);
+]
+
+ReactDOM.hydrate(...renderArgs);
 
 // Hot Module Replacement API
 if (module.hot) {
   module.hot.accept('../shared/Root', () => {
-    ReactDOM.render(
-      <AppContainer>
-        <ContextProvider context={context}>
-          <Root store={store} history={history} i18n={i18n} />
-        </ContextProvider>
-      </AppContainer>,
-      document.getElementById('root'),
-    );
+    ReactDOM.render(...renderArgs);
   });
 }
