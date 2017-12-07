@@ -2,18 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { createBrowserHistory as createHistory } from 'history';
-import 'reset.css';
+import stylesReset from 'reset.css';
 
-import '../shared/assets/styles/main.pcss';
 import store from '../shared/store';
 import i18n from '../shared/i18n';
 import Root from '../shared/Root';
 import ContextProvider from '../shared/components/ContextProvider/index'
 
+import stylesMain from '../shared/assets/styles/main.pcss';
+
+
 const history = createHistory();
 
 const context = {
   insertCss: (...styles) => {
+    styles.push(stylesReset);
+    styles.push(stylesMain);
     const removeCss = styles.map(x => x._insertCss());
     return () => {
       removeCss.forEach(f => f());
@@ -32,7 +36,7 @@ ReactDOM.hydrate(
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./Root', () => {
+  module.hot.accept('../shared/Root', () => {
     ReactDOM.render(
       <AppContainer>
         <ContextProvider context={context}>

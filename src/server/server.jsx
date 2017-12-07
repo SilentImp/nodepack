@@ -1,3 +1,4 @@
+// import fs from 'fs';
 import React from 'react';
 import { renderToString } from "react-dom/server";
 import { AppContainer } from 'react-hot-loader';
@@ -17,7 +18,7 @@ const spriteContent = sprite.stringify();
 const app = express();
 
 app.use(express.static('build'));
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   const css = new Set();
   css.add(stylesReset._getCss());
   css.add(stylesMain._getCss());
@@ -35,17 +36,16 @@ app.get('/', (req, res) => {
     </AppContainer>,
   );
   const scripts = Object.keys(assets).sort().map((entry)=>`<script async src="${ assets[entry].js }"></script>`).join('');
-
-  res.send(template({
+  const rendered = template({
     title: 'Template Monster',
     page,
     styles: [...css].join(''),
     scripts,
     svgSprite: spriteContent
-  }));
+  });
+  // fs.writeFile('./build/index.html', rendered, 'utf8');
+  res.send(rendered);
 
 });
-
-
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build public",
-    "start": "export NODE_ENV=local && webpack-dev-server",
+    "start": "export NODE_ENV=local && webpack-dev-server --hot --inline",
     "build": "npm run clean && export NODE_ENV=production && npm-run-all build:production:*",
     "build:production:client": "webpack -p --config ./webpack.config.js --env=production --progress --colors --display-reasons --verbose --display-chunks",
     "build:production:server": "webpack -p --config ./webpack.server.config.js --env=production --progress --colors --display-reasons --verbose --display-chunks",
@@ -19,10 +19,10 @@
     "test": "export NODE_ENV=test && jest --no-cache",
     "test:watch": "export NODE_ENV=test && jest --no-cache --watch",
     "test:coverage": "export NODE_ENV=test && jest --no-cache --coverage",
-    "lint": "npm run format && npm-run-all lint:*",
+    "lint": "npm-run-all lint:*",
     "lint:js": "eslint ./src/** --ext .jsx,.js --color -f stylish --fix",
     "lint:css": "stylelint './src/**/*.pcss' --color -r -f verbose --fix",
-    "lint:doc": "documentation lint src/**/*.js*",
+    "lint:doc": "documentation lint src/**/*",
     "precommit": "git add . -A && lint-staged",
     "commitmsg": "commit-msg ${GIT_PARAMS}"
   },
@@ -56,7 +56,6 @@
     "css-loader": "^0.28.7",
     "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
-    "file-loader": "^1.1.5",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
     "husky": "^0.14.3",
@@ -74,6 +73,7 @@
     "postcss-loader": "^2.0.9",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^2.1.2",
+    "postcss-sass": "^0.2.0",
     "postcss-simple-vars": "^4.1.0",
     "prop-types": "^15.6.0",
     "pug": "^2.0.0-rc.4",
@@ -100,10 +100,14 @@
     "svgo-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.6.0",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "html-webpack-plugin": "^2.30.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
+    "documentation": "^5.3.3",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.12.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -112,6 +116,12 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.4.1",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "stylelint": "^8.3.1"
+    "extract-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "jest": "^21.2.1",
+    "stylelint": "^8.3.1",
+    "stylelint-scss": "^2.2.0",
+    "webpack-dev-server": "^2.9.5"
   }
 }

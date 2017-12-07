@@ -7,7 +7,7 @@ import Icon from 'Components/Icon';
 import * as actions from 'actions/';
 import Config from 'Config';
 
-import './monoicon/resume.svg';
+import './icon/like.svg';
 import styles from './ExamplePage.pcss';
 
 const mapStateToProps = state => ({
@@ -31,7 +31,7 @@ class ExamplePage extends Component {
       <DocumentTitle title="Example Title">
         <section className={styles.ExamplePage}>
           <h1 className={styles.ExamplePage__title}>
-            <Icon icon="resume" />
+            <Icon icon="like" />
             {t('Example')}
             so: {Config.test}
           </h1>
