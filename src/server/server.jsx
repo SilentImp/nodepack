@@ -4,13 +4,14 @@ import { renderToString } from "react-dom/server";
 import { AppContainer } from 'react-hot-loader';
 import stylesReset from 'reset.css';
 import sprite from 'svg-sprite-loader/runtime/sprite.build';
-import template from 'shared/template/index.pug';
-import store from '../shared/store';
-import i18n from '../shared/i18n';
-import Root from '../shared/Root';
-import ContextProvider from '../shared/components/ContextProvider/index'
-import stylesMain from '../shared/assets/styles/main.pcss';
-import assets from '../../build/webpack-assets.json';
+import template from 'shared/template/index.pug'; // eslint-disable-line
+import store from '../shared/store'; // eslint-disable-line
+import i18n from '../shared/i18n'; // eslint-disable-line
+import Root from '../shared/Root'; // eslint-disable-line
+import ContextProvider from '../shared/components/ContextProvider/index' // eslint-disable-line
+import stylesMain from '../shared/assets/styles/main.pcss'; // eslint-disable-line
+import assets from '../../build/webpack-assets.json'; // eslint-disable-line
+
 
 const express = require('express');
 

@@ -2,6 +2,7 @@
   "presets": [
     ["env", {
         "targets": {
+          "uglify": true,
           "node": "current",
           "browsers": ["> 3%", "ie 11"]
         },

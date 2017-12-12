@@ -28,8 +28,8 @@ module.exports = {
   output: {
     path: path.resolve(projectPath, 'build'),
     publicPath: '/',
-    chunkFilename: '[name]-[hash].chunk.js',
-    filename: '[name]-[hash].bundle.js',
+    chunkFilename: '[name].chunk.js',
+    filename: '[name].bundle.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -39,6 +39,7 @@
   "author": "Anton Nemtsev <thesilentimp@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@plasma-platform/plasma-quark": "3.0.18",
     "@plasma-platform/tm-css": "^1.0.10",
     "@plasma-platform/tm-message-hook": "^2.0.11",
     "assets-webpack-plugin": "^3.5.1",
@@ -58,6 +59,7 @@
     "express": "^4.16.2",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
+    "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "i18next": "^10.2.1",
     "i18next-browser-languagedetector": "^2.1.0",
@@ -100,8 +102,7 @@
     "svgo-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.6.0",
-    "webpack-merge": "^4.1.1",
-    "html-webpack-plugin": "^2.30.1"
+    "webpack-merge": "^4.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",

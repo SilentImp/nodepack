@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import DocumentTitle from 'react-document-title';
-import Icon from 'Components/Icon';
+import Icon from '@plasma-platform/plasma-quark/lib/Icon';
 import * as actions from 'actions/';
 import Config from 'Config';
 
