@@ -1,9 +1,13 @@
-// import fs from 'fs';
-import React from 'react';
-import { renderToString } from "react-dom/server";
-import { AppContainer } from 'react-hot-loader';
-import stylesReset from 'reset.css';
-import sprite from 'svg-sprite-loader/runtime/sprite.build';
+import browserEnv from 'browser-env';
+
+browserEnv();
+
+// import fs from 'fs'; // eslint-disable-line
+import React from 'react'; // eslint-disable-line
+import { renderToString } from "react-dom/server"; // eslint-disable-line
+import { AppContainer } from 'react-hot-loader'; // eslint-disable-line
+import stylesReset from 'reset.css'; // eslint-disable-line
+import sprite from 'svg-sprite-loader/runtime/sprite.build'; // eslint-disable-line
 import template from 'shared/template/index.pug'; // eslint-disable-line
 import store from '../shared/store'; // eslint-disable-line
 import i18n from '../shared/i18n'; // eslint-disable-line
