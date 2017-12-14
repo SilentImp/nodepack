@@ -1,21 +1,16 @@
-import browserEnv from 'browser-env';
-
-browserEnv();
-
-// import fs from 'fs'; // eslint-disable-line
-import React from 'react'; // eslint-disable-line
-import { renderToString } from "react-dom/server"; // eslint-disable-line
-import { AppContainer } from 'react-hot-loader'; // eslint-disable-line
-import stylesReset from 'reset.css'; // eslint-disable-line
-import sprite from 'svg-sprite-loader/runtime/sprite.build'; // eslint-disable-line
-import template from 'shared/template/index.pug'; // eslint-disable-line
-import store from '../shared/store'; // eslint-disable-line
-import i18n from '../shared/i18n'; // eslint-disable-line
-import Root from '../shared/Root'; // eslint-disable-line
-import ContextProvider from '../shared/components/ContextProvider/index' // eslint-disable-line
-import stylesMain from '../shared/assets/styles/main.pcss'; // eslint-disable-line
-import assets from '../../build/webpack-assets.json'; // eslint-disable-line
-
+// import fs from 'fs';
+import React from 'react';
+import { renderToString } from "react-dom/server";
+import { AppContainer } from 'react-hot-loader';
+import stylesReset from 'reset.css';
+import sprite from 'svg-sprite-loader/runtime/sprite.build';
+import template from 'shared/template/index.pug';
+import store from '../shared/store';
+import i18n from '../shared/i18n';
+import Root from '../shared/Root';
+import ContextProvider from '../shared/components/ContextProvider/index';
+import stylesMain from '../shared/assets/styles/main.pcss';
+import assets from '../../build/webpack-assets.json';
 
 const express = require('express');
 
@@ -24,14 +19,20 @@ const app = express();
 
 app.use(express.static('build'));
 app.get('*', (req, res) => {
+
+  console.log('prepearing styles for ', req.path);
+
   const css = new Set();
   css.add(stylesReset._getCss());
   css.add(stylesMain._getCss());
   const context = {
     insertCss: (...styles) => {
+      console.log('styles - : ', styles);
       styles.forEach(style => css.add(style._getCss()));
     }
   };
+
+  console.log('prepearing markup!');
 
   const page = renderToString(
     <AppContainer>
@@ -40,6 +41,9 @@ app.get('*', (req, res) => {
       </ContextProvider>
     </AppContainer>,
   );
+
+  console.log('rendered: ', page.length);
+
   const scripts = Object.keys(assets).sort().map((entry)=>`<script async src="${ assets[entry].js }"></script>`).join('');
   const rendered = template({
     title: 'Template Monster',
