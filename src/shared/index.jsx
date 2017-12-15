@@ -4,7 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { createBrowserHistory as createHistory } from 'history';
 import 'reset.css';
 import 'components/IconsSet';
-import 'styles/main.pcss';
+import './assets/styles/main.pcss';
 import configureStore from './store';
 import i18n from './i18n';
 import Root from './Root';

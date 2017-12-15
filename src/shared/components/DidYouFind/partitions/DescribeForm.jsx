@@ -49,7 +49,7 @@ class DescribeForm extends Component {
           name="cantFilterOrSort"
           type="checkbox"
           id="ICantFilterOrSortMySearch"
-          label={t(`I can\'t filter or sort my search`)}
+          label={t(`I can't filter or sort my search`)}
           component={this.renderCheckbox}
         />
 
@@ -76,7 +76,7 @@ class DescribeForm extends Component {
           name="needConsultation"
           type="checkbox"
           id="INeedAnExpertsConsultation"
-          label={t(`I need an expert\'s consultation`)}
+          label={t(`I need an expert's consultation`)}
           component={this.renderCheckbox}
         />
 

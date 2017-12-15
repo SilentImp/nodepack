@@ -7,6 +7,7 @@ import { createMemoryHistory as createHistory } from 'history';
 import stylesReset from 'reset.css';
 import sprite from 'svg-sprite-loader/runtime/sprite.build';
 import template from 'shared/template/index.pug';
+import { getProducts } from 'actions';
 // import { match } from 'react-router';
 import configureStore from '../shared/store';
 import i18n from '../shared/i18n';
@@ -17,8 +18,6 @@ import assets from '../../build/webpack-assets.json';
 
 const url = require('url');
 const express = require('express');
-
-import { getProducts } from 'actions';
 
 const app = express();
 app.use(express.static('build'));
@@ -37,7 +36,7 @@ app.use(async (req, res) => {
     };
 
     const store = configureStore({} , history);
-    const result = await store.dispatch(getProducts({locale: 'en'}));
+    await store.dispatch(getProducts({locale: 'en'}));
 
     const css = new Set();
     css.add(stylesReset._getCss());

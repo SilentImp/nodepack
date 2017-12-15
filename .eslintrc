@@ -27,6 +27,6 @@
     }
   },
   "rules": {
-    "no-underscore-dangle": ["error", { "allow": ["_id", "_insertCss", "_getCss"] }]
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_insertCss", "_getCss","__REDUX_STATE__"] }]
   }
 }

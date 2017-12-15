@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import styles from './ProductsSearch.pcss';
 import SearchField from 'components/SearchField';
+import styles from './ProductsSearch.pcss';
 
 export class ProductsSearch extends Component {
   static propTypes = {
