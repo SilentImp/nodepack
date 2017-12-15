@@ -1,0 +1,149 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+
+/*
+To calculate the column width and row height, you can use this:
+  width = (width_of_grid - (gutters + padding)) / number_of_columns
+  height = 4 * width / 3
+*/
+
+/* sizes for breakpoints ... - 719px */
+$cardWidth360: calc(100vw - 40px);
+$cardHeight360: calc(4 * $cardWidth360 / 3);
+
+/* sizes for breakpoints 720px- 959px */
+$gridGap720: 40px;
+$cardWidth720: calc((100vw - 3 * $gridGap720) / 2);
+$cardHeight720: calc(4 * $cardWidth720 / 3);
+
+/* sizes for breakpoints 960px - 1339px */
+$gridGap960: 40px;
+$cardWidth960: calc((100vw - 4 * $gridGap960) / 3);
+$cardHeight960: calc(4 * $cardWidth960 / 3);
+
+/* sizes for breakpoints 1340px - 1519px */
+$gridGap1340: 80px;
+$cardWidth1340: calc((100vw - 4 * $gridGap1340) / 3);
+$cardHeight1340: calc(4 * $cardWidth1340 / 3);
+
+/* sizes for breakpoints 1520px - 1879px */
+$gridGap1520: 80px;
+$cardWidth1520: calc((100vw - 5 * $gridGap1520) / 4);
+$cardHeight1520: calc(4 * $cardWidth1520 / 3);
+
+/* sizes for breakpoints 1880px - 2479px */
+$gridGap1880: 80px;
+$cardWidth1880: calc((100vw - 6 * $gridGap1880) / 5);
+$cardHeight1880: calc(4 * $cardWidth1880 / 3);
+
+/* sizes for breakpoints 2480px - ... */
+$gridGap2480: 80px;
+$cardWidth2480: calc((100vw - 7 * $gridGap2480) / 6);
+$cardHeight2480: calc(4 * $cardWidth2480 / 3);
+
+
+.ProductsList {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: $cardWidth360;
+  grid-auto-rows: $cardHeight360;
+  grid-row-gap: 20px;
+
+  @media (min-width: 720px) and (max-width: 959px) {
+    grid-template-columns: repeat(2, $cardWidth720);
+    grid-auto-rows: $cardHeight720;
+    grid-gap: $gridGap720;
+  }
+
+  @media (min-width: 960px) and (max-width: 1339px) {
+    grid-template-columns: repeat(3, $cardWidth960);
+    grid-auto-rows: $cardHeight960;
+    grid-gap: $gridGap960;
+  }
+
+  @media (min-width: 1340px) and (max-width: 1519px) {
+    grid-template-columns: repeat(3, $cardWidth1340);
+    grid-auto-rows: $cardHeight1340;
+    grid-gap: $gridGap1340;
+  }
+
+  @media (min-width: 1520px) and (max-width: 1879px) {
+    grid-template-columns: repeat(4, $cardWidth1520);
+    grid-auto-rows: $cardHeight1520;
+    grid-gap: $gridGap1520;
+  }
+
+  @media (min-width: 1880px) and (max-width: 2479px) {
+    grid-template-columns: repeat(5, $cardWidth1880);
+    grid-auto-rows: $cardHeight1880;
+    grid-gap: $gridGap1880;
+  }
+
+  @media (min-width: 2480px) {
+    grid-template-columns: repeat(6, $cardWidth2480);
+    grid-auto-rows: $cardHeight2480;
+    grid-gap: $gridGap2480;
+  }
+
+  &__item {
+
+    @media (min-width: 720px) and (max-width: 959px) {
+
+      &--720-wide {
+        grid-column-end: span 2;
+      }
+
+      &--720-big {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+    }
+
+    @media (min-width: 960px) and (max-width: 1519px) {
+
+      &--960-wide {
+        grid-column-end: span 3;
+      }
+
+      &--960-big {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+    }
+
+    @media (min-width: 1520px) and (max-width: 1879px) {
+
+      &--1520-wide {
+        grid-column-end: span 4;
+      }
+
+      &--1520-big {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+    }
+
+    @media (min-width: 1880px) and (max-width: 2479px) {
+
+      &--1880-wide {
+        grid-column-end: span 5;
+      }
+
+      &--1880-big {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+    }
+
+    @media (min-width: 2480px) {
+
+      &--2480-wide {
+        grid-column-end: span 6;
+      }
+
+      &--2480-big {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+    }
+  }
+}

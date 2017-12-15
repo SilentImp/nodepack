@@ -1,0 +1,54 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+
+.Benefit {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+
+  &__icon {
+    height: 80px;
+    margin-bottom: 40px;
+    width: 80px;
+  }
+
+  &__title {
+
+    @mixin H 3;
+    color: $color_success_6;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+
+    @mixin T 1;
+    color: $color_grey_light;
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: 1px solid $color_main_6;
+    color: $color_main_6;
+    margin-top: 20px;
+
+    &:hover {
+      background: $color_main_6;
+    }
+
+    &:active,
+    &:focus {
+      background: $color_main_6;
+      opacity: .5;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-moto, motocms, moto3, cms</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-278.000000, -428.000000)">
+            <g id="icn-moto,-motocms,-moto3,-cms" transform="translate(278.000000, 428.000000)">
+                <rect id="bg" fill="#6A518B" x="0" y="0" width="30" height="30" rx="3"></rect>
+                <g id="logo" transform="translate(5.000000, 5.000000)">
+                    <polygon id="14" fill="#FF9C00" transform="translate(7.500000, 4.000000) rotate(-270.000000) translate(-7.500000, -4.000000) " points="7.5 1.5 11.5 6.5 3.5 6.5"></polygon>
+                    <polygon id="13" fill="#FFC602" transform="translate(2.500000, 4.000000) scale(-1, 1) rotate(-270.000000) translate(-2.500000, -4.000000) " points="2.5 1.5 6.5 6.5 -1.5 6.5"></polygon>
+                    <polygon id="12" fill="#FFE748" transform="translate(17.500000, 4.000000) rotate(-270.000000) translate(-17.500000, -4.000000) " points="17.5 1.5 21.5 6.5 13.5 6.5"></polygon>
+                    <polygon id="11" fill="#FFCE26" transform="translate(12.500000, 4.000000) scale(-1, 1) rotate(-270.000000) translate(-12.500000, -4.000000) " points="12.5 1.5 16.5 6.5 8.5 6.5"></polygon>
+                    <polygon id="10" fill="#FF9600" transform="translate(12.500000, 8.000000) rotate(-270.000000) translate(-12.500000, -8.000000) " points="12.5 5.5 16.5 10.5 8.5 10.5"></polygon>
+                    <polygon id="9" fill="#FF7201" transform="translate(7.500000, 8.000000) scale(-1, 1) rotate(-270.000000) translate(-7.500000, -8.000000) " points="7.5 5.5 11.5 10.5 3.5 10.5"></polygon>
+                    <polygon id="8" fill="#FF8A01" transform="translate(17.500000, 12.000000) rotate(-270.000000) translate(-17.500000, -12.000000) " points="17.5 9.5 21.5 14.5 13.5 14.5"></polygon>
+                    <polygon id="7" fill="#E12C1A" transform="translate(12.500000, 12.000000) scale(-1, 1) rotate(-270.000000) translate(-12.500000, -12.000000) " points="12.5 9.5 16.5 14.5 8.5 14.5"></polygon>
+                    <polygon id="6" fill="#DD2A00" transform="translate(7.500000, 12.000000) rotate(-270.000000) translate(-7.500000, -12.000000) " points="7.5 9.5 11.5 14.5 3.5 14.5"></polygon>
+                    <polygon id="5" fill="#FF8F02" transform="translate(2.500000, 12.000000) scale(-1, 1) rotate(-270.000000) translate(-2.500000, -12.000000) " points="2.5 9.5 6.5 14.5 -1.5 14.5"></polygon>
+                    <polygon id="4" fill="#B1150A" transform="translate(12.500000, 16.000000) rotate(-270.000000) translate(-12.500000, -16.000000) " points="12.5 13.5 16.5 18.5 8.5 18.5"></polygon>
+                    <polygon id="3" fill="#BC1B01" transform="translate(7.500000, 16.000000) scale(-1, 1) rotate(-270.000000) translate(-7.500000, -16.000000) " points="7.5 13.5 11.5 18.5 3.5 18.5"></polygon>
+                    <polygon id="2" fill="#FFC602" transform="translate(17.500000, 8.000000) scale(-1, 1) rotate(-270.000000) translate(-17.500000, -8.000000) " points="17.5 5.5 21.5 10.5 13.5 10.5"></polygon>
+                    <polygon id="1" fill="#FFA801" transform="translate(2.500000, 8.000000) rotate(-270.000000) translate(-2.500000, -8.000000) " points="2.5 5.5 6.5 10.5 -1.5 10.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

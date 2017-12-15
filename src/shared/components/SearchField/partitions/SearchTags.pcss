@@ -1,0 +1,105 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+
+.TMLibrarySearchFieldTags {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+
+  &__wrap {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__container {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+  }
+
+  &:not(.TMLibrarySearchFieldTags--activeTouch) & {
+
+    &__container {
+      transition: left .3s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+  }
+
+  &__tag {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    height: 60px;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: -10px;
+    width: 60px;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      cursor: pointer;
+      border-top: 2px solid $color_grey_dark;
+      border-right: 2px solid $color_grey_dark;
+      height: 7px;
+      position: absolute;
+      top: 28px;
+      width: 7px;
+    }
+
+    &--left {
+      left: 0;
+
+      &::after {
+        transform: rotate(-135deg);
+      }
+
+      &:hover ~ .TMLibrarySearchFieldTags__wrap {
+        margin-left: 20px;
+        transition: all .3s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+    }
+
+    &--right {
+      right: 0;
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:hover::after {
+      border-top: 2px solid $color_important_focus;
+      border-right: 2px solid $color_important_focus;
+    }
+  }
+
+  &--scrollable {
+
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 70px;
+      z-index: 1;
+    }
+
+    &:not(.TMLibrarySearchFieldTags--leftPosition)::before {
+      background: linear-gradient(to right, #ffffff 20%, rgba(255, 255, 255, 0.75) 70%, rgba(255, 255, 255, 0.2));
+      left: 0;
+    }
+
+    &:not(.TMLibrarySearchFieldTags--rightPosition)::after {
+      background: linear-gradient(to left, #ffffff 20%, rgba(255, 255, 255, 0.75) 70%, rgba(255, 255, 255, 0.2));
+      right: 0;
+    }
+  }
+}

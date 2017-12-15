@@ -1,16 +1,20 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
+import { connect } from 'react-redux';
+
+import { getTopics, getPlatformTypes } from 'actions';
 
 export class App extends Component {
-
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     i18n: PropTypes.shape({
       changeLanguage: PropTypes.func.isRequired,
     }).isRequired,
+    getPlatformTypes: PropTypes.func.isRequired,
+    getTopics: PropTypes.func.isRequired,
     t: PropTypes.func.isRequired,
-  };
+  }
 
   static childContextTypes = {
     insertCss: PropTypes.func,
@@ -18,11 +22,7 @@ export class App extends Component {
       changeLanguage: PropTypes.func.isRequired,
     }).isRequired,
     t: PropTypes.func,
-  };
-
-  static defaultProps = {
-    children: null,
-  };
+  }
 
   getChildContext() {
     return {
@@ -31,9 +31,14 @@ export class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getTopics();
+    this.props.getPlatformTypes();
+  }
+
   onRequestChangeAppLocale = (localeCode = 'en') => {
     this.props.i18n.changeLanguage(localeCode);
-  };
+  }
 
   render() {
     const { children } = this.props;
@@ -41,4 +46,7 @@ export class App extends Component {
   }
 }
 
-export default translate()(App);
+export default connect(null, {
+  getTopics,
+  getPlatformTypes,
+})(translate()(App));

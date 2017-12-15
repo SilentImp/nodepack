@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+
 const projectPath = path.resolve(__dirname, '../../');
 
 module.exports = {
@@ -21,12 +22,12 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        use: 'eslint-loader',
-        exclude: /node_modules/,
-      }
+      // {
+      //   enforce: 'pre',
+      //   test: /\.jsx?$/,
+      //   use: 'eslint-loader',
+      //   exclude: /node_modules/,
+      // }
     ]
   }
 };

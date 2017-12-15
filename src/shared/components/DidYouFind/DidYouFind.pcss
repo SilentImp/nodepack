@@ -1,0 +1,339 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+
+.DidYouFind {
+  position: relative;
+
+  &__container {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &--visible {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  &__illustration {
+    height: 90px;
+    left: 20px;
+    position: absolute;
+    top: -70px;
+    width: 55px;
+
+    @media (min-width: 720px) {
+      left: 40px;
+    }
+
+    @media (min-width: 1340px) {
+      left: 80px;
+    }
+
+    @media (min-width: 2480px) {
+      left: 160px;
+    }
+  }
+
+  &__ovals {
+    height: 30px;
+    left: 4px;
+    position: absolute;
+    top: 6px;
+    width: 10px;
+
+    @media (min-width: 720px) {
+      left: 24px;
+    }
+
+    @media (min-width: 1340px) {
+      left: 64px;
+    }
+
+    @media (min-width: 2480px) {
+      left: 144px;
+    }
+  }
+
+  &__oval {
+    background: $color_main_3;
+    border-radius: 50%;
+    position: absolute;
+
+    &:first-child {
+      height: 3px;
+      right: 0;
+      top: 0;
+      width: 3px;
+    }
+
+    &:nth-child(2) {
+      height: 5px;
+      left: 0;
+      top: 10px;
+      width: 5px;
+    }
+
+    &:last-child {
+      bottom: 0;
+      height: 8px;
+      left: 1px;
+      width: 8px;
+    }
+  }
+
+  &Section {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &:first-child {
+      border: 0;
+      display: block;
+      height: auto;
+      opacity: 1;
+      padding: 30px 60px 30px 20px;
+      position: relative;
+
+      @media (min-width: 720px) {
+        padding-left: 40px;
+      }
+
+      @media (min-width: 1340px) {
+        padding-left: 80px;
+      }
+
+      @media (min-width: 2480px) {
+        padding-left: 160px;
+      }
+    }
+
+    &--visible {
+      border-top: 1px solid $color_main_3;
+      height: auto;
+      opacity: 1;
+      padding: 20px;
+      transition: opacity 0.3s $easeInOutQuint;
+
+      @media (min-width: 720px) {
+        padding: 40px;
+      }
+
+      @media (min-width: 1340px) {
+        padding: 40px 80px;
+      }
+
+      @media (min-width: 2480px) {
+        padding: 40px 160px;
+      }
+    }
+
+    &--visible & {
+
+      &__header {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__header {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (min-width: 720px) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &__step {
+      display: none;
+
+      @media (min-width: 720px) {
+
+        @mixin T 1;
+        background-color: $color_grey_dark;
+        border-radius: 50%;
+        border: 5px solid $color_main_3;
+        color: $color_white;
+        display: block;
+        flex-shrink: 0;
+        font-weight: bold;
+        height: 40px;
+        line-height: 30px;
+        margin-right: 20px;
+        text-align: center;
+        width: 40px;
+      }
+    }
+
+    &__title {
+
+      @mixin H 3;
+      flex: 100%;
+      height: 0;
+      letter-spacing: 2px;
+      opacity: 0;
+      text-transform: uppercase;
+      width: 0;
+
+      &--success {
+        color: $color_success_6;
+      }
+
+      &--visible {
+        height: auto;
+        margin-bottom: 20px;
+        opacity: 1;
+        transition: opacity .3s $easeInOutQuint;
+        width: auto;
+      }
+
+      @media (min-width: 720px) {
+        flex: initial;
+        margin-bottom: 0;
+      }
+    }
+
+    &__descr {
+
+      @mixin T 3;
+      margin-bottom: 10px;
+    }
+
+    &__button {
+
+      @mixin H 3;
+      background: none;
+      border-radius: 3px;
+      cursor: pointer;
+      height: 40px;
+      outline: none;
+      padding: 5px 20px;
+      text-transform: uppercase;
+
+      &--yes {
+        border: 1px solid $color_success_6;
+        color: $color_success_6;
+
+        @media (min-width: 720px) {
+          margin-left: 20px;
+        }
+
+        &:hover {
+          background: $color_success_6;
+        }
+
+        &:active {
+          background: $color_success_active;
+          border-color: $color_success_active;
+        }
+      }
+
+      &--yes&--checked {
+        background: $color_success_6;
+        border-color: $color_success_6;
+      }
+
+      &--no {
+        border: 1px solid $color_error_active;
+        color: $color_error_active;
+        margin-left: 20px;
+
+        &:hover {
+          background: $color_error_active;
+        }
+
+        &:active {
+          background: $color_error_10;
+          border-color: $color_error_10;
+        }
+      }
+
+      &--no&--checked {
+        background: $color_error_active;
+        border-color: $color_error_active;
+      }
+
+      &--checked {
+        color: $color_white;
+      }
+
+      &:hover,
+      &:active {
+        color: $color_white;
+      }
+    }
+
+    &RemoveButton {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      outline: none;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+
+      &:hover & {
+
+        &__icon {
+          background: $color_error_active;
+
+          &::before,
+          &::after {
+            background-color: $color_white;
+          }
+        }
+      }
+
+      &:active & {
+
+        &__icon {
+          background: $color_error_10;
+          top: 1px;
+
+          &::before,
+          &::after {
+            background-color: $color_white;
+          }
+        }
+      }
+
+      &__icon {
+        background: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: 21px;
+        position: relative;
+        transform: rotate(45deg);
+        vertical-align: middle;
+        width: 21px;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: $color_grey_light;
+        }
+
+        &::before {
+          height: 1px;
+          left: 4px;
+          top: 10px;
+          width: 13px;
+        }
+
+        &::after {
+          height: 13px;
+          left: 10px;
+          top: 4px;
+          width: 1px;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const fs = require('fs');
 const webpack = require('webpack');
 const path = require('path');
+
 const projectPath = path.resolve(__dirname, '../../');
 
 const env = process.env.NODE_ENV || 'dev';
@@ -109,6 +110,9 @@ module.exports = {
         ],
       }, {
         test: /\/images\/.*\.svg$/,
+        use: 'file-loader',
+      }, {
+        test: /\/background\/.*\.svg$/,
         use: 'file-loader',
       }, {
         test: /\.pcss$/,

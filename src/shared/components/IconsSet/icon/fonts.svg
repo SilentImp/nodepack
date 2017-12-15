@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-icons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-40.000000, -1832.000000)">
+            <g id="icn-icons" transform="translate(40.000000, 1832.000000)">
+                <rect id="bg" fill="#243238" x="0" y="0" width="30" height="30" rx="3.75"></rect>
+                <path d="M23.5,5 L6.5,5 L6.5,10 L8.19915,10 C8.19915,9.02166667 8.5366,7.5 9.9,7.5 L13.3,7.5 L13.3,21.5616667 C13.3,22.54 12.59875,23.3333333 11.6,23.3333333 L10.75,23.3333333 L10.75,25 L19.24915,25 L19.24915,23.3333333 L18.4,23.3333333 C17.4021,23.3333333 16.7,22.54 16.7,21.5616667 L16.7,7.5 L20.1,7.5 C21.50165,7.5 21.817,9.02166667 21.817,10 L23.5,10 L23.5,5 L23.5,5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

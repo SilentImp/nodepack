@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-jigoshop, e-commerce</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-754.000000, -956.000000)">
+            <g id="icn-jigoshop,-e-commerce" transform="translate(754.000000, 956.000000)">
+                <rect id="bg" fill="#98C242" x="0" y="0" width="30" height="30" rx="3"></rect>
+                <g id="Jigoshop-Icon" transform="translate(5.000000, 8.000000)" fill="#FFFFFF">
+                    <polygon id="&lt;" points="1.8037149 5.32888889 8.58747247 8.84888889 7.77192151 10.6577778 0 6.47777778 0 4.18 7.77192151 0 8.58747247 1.85777778"></polygon>
+                    <polygon id="&lt;" transform="translate(15.697624, 9.645128) scale(-1, 1) translate(-15.697624, -9.645128) " points="13.2076026 9.64512821 19.9913602 13.1651282 19.1758092 14.9740171 11.4038877 10.7940171 11.4038877 8.49623932 19.1758092 4.31623932 19.9913602 6.17401709"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

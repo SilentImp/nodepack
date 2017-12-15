@@ -1,0 +1,168 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+@import '../../../assets/styles/animations.pcss';
+
+.CommentsForm {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @media (min-width: 720px) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (min-width: 720px) {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+
+    @media (min-width: 1340px) {
+      margin-right: 80px;
+    }
+  }
+
+  &__title {
+
+    @mixin T 3;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media (min-width: 720px) {
+
+      @mixin T 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__illustration {
+    height: 105px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media (min-width: 720px) {
+      height: 105px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 960px) {
+      height: 135px;
+    }
+
+    @media (min-width: 1340px) {
+      height: 165px;
+    }
+
+    @media (min-width: 1520px) {
+      height: 195px;
+    }
+
+    @media (min-width: 1880px) {
+      height: 230px;
+    }
+
+    @media (min-width: 1880px) {
+      height: 310px;
+    }
+  }
+
+  &__descr {
+
+    @mixin T 1;
+  }
+
+  &__formWrap {
+    flex: 1;
+    white-space: nowrap;
+
+    &--success {
+      transform: translateX(-100%);
+      transition: all .3s $easeInOutQuint;
+
+      .CommentsForm__form {
+        opacity: 0;
+        transition: all .3s $easeInOutQuint;
+      }
+    }
+  }
+
+  &__form {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+
+    &--invalid {
+      animation: shake .3s linear;
+    }
+  }
+
+  &Success {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    &__icon {
+      height: 80px;
+      margin-bottom: 40px;
+      width: 80px;
+    }
+
+    &__title {
+
+      @mixin H 3;
+      color: $color_success_6;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    &__descr,
+    &__email {
+
+      @mixin T 1;
+    }
+
+    &__email {
+      font-weight: bold;
+    }
+  }
+
+  &__field,
+  &__textarea {
+    margin-bottom: 20px;
+
+    @media (min-width: 720px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__field {
+
+    @media (min-width: 1880px) {
+      width: calc(50% - 20px);
+
+      &:first-child {
+        float: left;
+      }
+
+      &:nth-child(2) {
+        float: right;
+      }
+    }
+  }
+
+  &__buttonIcon {
+    fill: $color_white;
+    margin-right: 10px;
+  }
+}

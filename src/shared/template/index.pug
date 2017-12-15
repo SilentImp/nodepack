@@ -29,11 +29,13 @@ html(lang='en')
     style!= styles
   body
     != svgSprite
+    script.
+      window.__REDUX_STATE__=!{state};
     main#root.root!= page
-    script(src='javascript/fontloader.js', async=true)
+    script(src='/javascript/fontloader.js', async=true)
     script.
       (function LoadWorker() {
       if ( !navigator.serviceWorker ) return;
-      navigator.serviceWorker.register( "worker.js" , { scope: '/' } );
+      navigator.serviceWorker.register( "/worker.js" , { scope: '/' } );
       })();
     != scripts

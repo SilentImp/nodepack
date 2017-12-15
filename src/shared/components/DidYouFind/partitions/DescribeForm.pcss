@@ -1,0 +1,28 @@
+.DescribeForm {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 720px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 40px;
+  }
+
+  @media (min-width: 2480px) {
+    flex-wrap: nowrap;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    padding: 20px 0;
+
+    @media (min-width: 720px) {
+      padding: 20px;
+      width: 50%;
+    }
+
+    @media (min-width: 960px) {
+      width: 33%;
+    }
+  }
+}

@@ -3,4 +3,8 @@ import common from './common';
 export default {
   ...common,
   env: 'dev',
+  monsterURL: '//www.templatemonsterdev.com/',
+  productsServiceURL: '//api.templatemonsterdev.com/products/v2/',
+  ticketsServiceURL: '//service-tickets.templatemonsterdev.com/api/v1/',
+  uploadsServiceURL: '//api.templatemonsterdev.com/uploads/v1/',
 };

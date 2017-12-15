@@ -4,15 +4,23 @@ import { AppContainer } from 'react-hot-loader';
 import { createBrowserHistory as createHistory } from 'history';
 import stylesReset from 'reset.css';
 
-import store from '../shared/store';
+import configureStore from '../shared/store';
 import i18n from '../shared/i18n';
 import Root from '../shared/Root';
 import ContextProvider from '../shared/components/ContextProvider/index'
 
 import stylesMain from '../shared/assets/styles/main.pcss';
 
-
 const history = createHistory();
+let initialState;
+try {
+  initialState = JSON.parse(window.__REDUX_STATE__);
+} catch (error) {
+  initialState = {};
+}
+console.log('__REDUX_STATE__: ', window.__REDUX_STATE__);
+console.log('initialState: ', initialState);
+const store = configureStore(initialState , history);
 
 const context = {
   insertCss: (...styles) => {
@@ -28,7 +36,11 @@ const context = {
 ReactDOM.hydrate(
   <AppContainer>
     <ContextProvider context={context}>
-      <Root store={store} history={history} i18n={i18n} />
+      <Root
+        store={store}
+        history={history}
+        i18n={i18n}
+      />
     </ContextProvider>
   </AppContainer>,
   document.getElementById('root'),

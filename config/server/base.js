@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+
 const projectPath = path.resolve(__dirname, '../../');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -105,6 +106,9 @@ module.exports = {
             },
           },
         ],
+      }, {
+        test: /\/background\/.*\.svg$/,
+        use: 'file-loader',
       }, {
         test: /\/images\/.*\.svg$/,
         use: 'file-loader',

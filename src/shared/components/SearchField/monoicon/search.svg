@@ -1,0 +1,18 @@
+<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 41</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2704 207)">
+<g id="Group 41">
+<g id="Stroke 1417 (Stroke)">
+<use xlink:href="#path0_fill" transform="translate(2704 -207)" fill="#90A4AE"/>
+</g>
+<g id="Stroke 1418 (Stroke)">
+<use xlink:href="#path1_fill" transform="translate(2715.28 -195.719)" fill="#90A4AE"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 7.10861 1C 3.73515 1 1 3.73515 1 7.10861C 1 10.4821 3.73515 13.2172 7.10861 13.2172C 10.4821 13.2172 13.2172 10.4821 13.2172 7.10861C 13.2172 3.73515 10.4821 1 7.10861 1ZM 0 7.10861C 0 3.18286 3.18286 0 7.10861 0C 11.0344 0 14.2172 3.18286 14.2172 7.10861C 14.2172 11.0344 11.0344 14.2172 7.10861 14.2172C 3.18286 14.2172 0 11.0344 0 7.10861Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0.146447 0.146447C 0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L 8.57241 7.8653C 8.76767 8.06056 8.76767 8.37715 8.57241 8.57241C 8.37715 8.76767 8.06056 8.76767 7.8653 8.57241L 0.146447 0.853553C -0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"/>
+</defs>
+</svg>

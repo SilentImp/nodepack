@@ -1,0 +1,12 @@
+<svg width="20" height="15" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icn-Reload, renew, repeat</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(457 -3926)">
+<g id="icn-Reload, renew, repeat">
+<use xlink:href="#path0_fill" transform="translate(-457 3926)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 17.4533 8.31592C 17.0458 12.0734 13.865 15.0001 10 15.0001C 7.75167 15.0001 5.74 14.0051 4.36417 12.4376L 5.40167 11.0768C 6.47083 12.4476 8.13167 13.3334 10 13.3334C 12.9383 13.3334 15.37 11.1468 15.7692 8.31592L 13.3333 8.31592L 16.6667 3.94092L 20 8.31592L 17.4533 8.31592ZM 4.23333 6.66667C 4.63917 3.84417 7.06667 1.66667 10 1.66667C 11.8642 1.66667 13.5233 2.54917 14.5917 3.915L 15.6283 2.555C 14.2533 0.991667 12.2442 0 10 0C 6.14 0 2.96417 2.9175 2.54917 6.66667L 0 6.66667L 3.33333 11.0417L 6.66667 6.66667L 4.23333 6.66667Z"/>
+</defs>
+</svg>

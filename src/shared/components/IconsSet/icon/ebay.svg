@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-ebay</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-992.000000, -1657.000000)">
+            <g id="icn-ebay" transform="translate(992.000000, 1657.000000)">
+                <rect id="bg" fill="#DDE3E6" x="0" y="0" width="30" height="30" rx="3.75"></rect>
+                <g id="Group-2" transform="translate(5.000000, 4.000000)">
+                    <path d="M5.07072947,4.65370178 C5.25630943,2.00398079 6.21339016,2.93031333e-16 10,0 C13.8009878,0 14.7691552,1.94023856 14.9542387,4.65370178 L20,4.65370178 L20,19.6537018 L0,19.6537018 L0,4.65370178 L5.07072947,4.65370178 Z M6.28234863,4.65370178 L13.7545776,4.65370178 C13.7545776,2.57072449 13.1931348,1.20651245 10,1.20651245 C6.80686517,1.20651245 6.28234863,2.5579071 6.28234863,4.65370178 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#E53238" x="0" y="7.65002441" width="5" height="9"></rect>
+                    <rect id="Rectangle" fill="#0064D2" x="5" y="7.65002441" width="5" height="9"></rect>
+                    <rect id="Rectangle" fill="#F5AF02" x="10" y="7.65002441" width="5" height="9"></rect>
+                    <rect id="Rectangle" fill="#86B817" x="15" y="7.65002441" width="5" height="9"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

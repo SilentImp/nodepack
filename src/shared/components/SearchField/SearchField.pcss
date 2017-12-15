@@ -1,0 +1,159 @@
+.TMLibrarySearchField {
+  display: flex;
+  background-color: #ffffff;
+  border-color: #90caf9;
+  border-width: 1px 0;
+  border-style: solid;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #243238;
+  cursor: text;
+  font-size: 16px;
+  height: 60px;
+  line-height: 24px;
+  margin: 0;
+  outline: none;
+  padding: 10px 120px 10px 49px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &__icon {
+    fill: #90a4ae;
+    left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__innerTags {
+    display: none;
+
+    @media (min-width: 720px) {
+      display: block;
+    }
+  }
+
+  &__outerTags {
+    padding: 10px;
+    width: 100%;
+
+    @media (min-width: 720px) {
+      display: none;
+    }
+  }
+
+  &__input {
+    border: 0;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    width: 0;
+  }
+
+  &__placeholder {
+    color: #90a4ae;
+    position: absolute;
+    left: 51px;
+    top: 17px;
+  }
+
+  &__placeholderContinue {
+    align-self: center;
+    color: #90a4ae;
+    margin-left: 20px;
+    min-width: 200px;
+  }
+
+  &RemoveButton {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    outline: none;
+    position: absolute;
+    top: -1px;
+    right: 59px;
+    width: 60px;
+
+    &__icon {
+      display: block;
+      height: 20px;
+      position: relative;
+      transform: rotate(45deg);
+      width: 20px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #90a4ae;
+      }
+
+      &::before {
+        width: 13px;
+        height: 1px;
+        left: 3px;
+        top: 9px;
+      }
+
+      &::after {
+        width: 1px;
+        height: 13px;
+        left: 9px;
+        top: 3px;
+      }
+    }
+
+    &:hover & {
+
+      &__icon {
+
+        &::before,
+        &::after {
+          background-color: #d84315;
+        }
+      }
+    }
+
+    &:active & {
+
+      &__icon {
+        top: 1px;
+
+        &::before,
+        &::after {
+          background-color: #bf360c;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: 2;
+  }
+
+  &__btnIcon {
+    fill: #ffffff;
+  }
+
+  &--focused & {
+
+    &__placeholder {
+      color: #bbdefb;
+    }
+
+    &__icon {
+      fill: #bbdefb;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+}

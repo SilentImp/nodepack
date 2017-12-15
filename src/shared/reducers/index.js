@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-// import { yourReducer } from './yourReducer';
+import { routerReducer } from 'react-router-redux';
+import products from './serviceProducts';
+import uploads from './serviceUploads';
 
-const rootReducer = combineReducers({
-  // yourReducer,
+export default combineReducers({
+  products,
+  uploads,
   form: formReducer,
+  router: routerReducer,
 });
-
-export default rootReducer;

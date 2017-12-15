@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-oscommerce, e-commerce</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-278.000000, -1131.000000)">
+            <g id="icn-oscommerce,-e-commerce" transform="translate(278.000000, 1131.000000)">
+                <g id="logo">
+                    <rect id="bg" fill="#303030" x="0" y="0" width="30" height="30" rx="3"></rect>
+                    <g id="ovals" transform="translate(6.000000, 5.000000)">
+                        <circle id="Oval-10" fill="#262FDA" cx="12.9411765" cy="8.23529411" r="4.70588235"></circle>
+                        <circle id="Oval-10" fill="#F62A28" cx="8.23529411" cy="4.70588235" r="4.70588235"></circle>
+                        <circle id="Oval-10" fill="#98D64A" cx="6.47058825" cy="13.5294118" r="6.47058825"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

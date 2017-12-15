@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-virtuemart, e-commerce</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-278.000000, -956.000000)">
+            <g id="icn-virtuemart,-e-commerce" transform="translate(278.000000, 956.000000)">
+                <rect id="bg" fill="#355A95" x="0" y="0" width="30" height="30" rx="3"></rect>
+                <path d="M8.63324182,21 L4,9.57874481 L6.41905911,9.57874481 L9.28564246,17.1911771 C13.6988318,6.78346137 20.7045557,3.43826551 29.8747559,2.06469727 L29.8747559,2.31469727 C24.2495117,4.37939453 21.5832064,5.0780446 17.6274414,8.43969727 L15.1601149,10.937133 C15.0580982,11.1079473 14.9412428,11.2502415 14.8253991,11.394529 L14.2079033,12.1972339 C12.4417507,14.5913949 10.962931,17.4845056 9.84277137,21 L8.63324182,21 Z" id="Fill-1315" fill="#FFFFFF"></path>
+                <polygon id="Fill-1633" fill="#FFFFFF" points="22.7449707 20.8493492 21.4281494 14.6195992 18.8712499 21 18.0634142 21 15.5065147 14.6195992 14.1364647 20.8493492 11.9613579 20.8493492 14.468628 9.59484864 15.5065146 9.29142118 18.4629498 17.073749 21.150035 9.29142118 22.3366706 9.29142118 24.9290558 20.8493492"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

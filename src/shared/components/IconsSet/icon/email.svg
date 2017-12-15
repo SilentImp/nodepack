@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-newsletter, web</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-754.000000, -604.000000)">
+            <g id="icn-newsletter,-web" transform="translate(754.000000, 604.000000)">
+                <rect id="bg" fill="#243238" x="0" y="0" width="30" height="30" rx="3"></rect>
+                <path d="M10.8516505,14.604466 L5,10.1094175 L5,20.4561165 L10.8516505,14.604466 L10.8516505,14.604466 Z M24.9479612,8.01975728 L5.06873786,8.01975728 L15.0004369,15.6489806 L24.9479612,8.01975728 L24.9479612,8.01975728 Z M17.7842233,15.6551456 L14.9995631,17.7907767 L12.210534,15.648301 L5.02427184,22.8346117 L24.9636408,22.8346117 L17.7842233,15.6551456 L17.7842233,15.6551456 Z M19.1440291,14.612233 L25,20.4682039 L25,10.1210194 L19.1440291,14.612233 L19.1440291,14.612233 Z" id="email-icon" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

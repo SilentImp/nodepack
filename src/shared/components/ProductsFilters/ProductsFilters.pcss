@@ -1,0 +1,96 @@
+@import '@plasma-platform/tm-css/helpers.pcss';
+
+.ProductsFilters {
+  background-color: $color_light_main;
+  display: none;
+  padding: 18px 0;
+
+  @media (min-width: 720px) {
+    display: flex;
+  }
+
+  &--fixed {
+    border-top: 1px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  &__list {
+
+    @mixin LibrarieContainer;
+    display: flex;
+    width: calc(100% + 80px);
+
+    @media (min-width: 720px) {
+      padding: 0;
+    }
+
+    @media (min-width: 1340px) {
+      padding: 0 20px;
+    }
+
+    @media (min-width: 1520px) {
+      padding: 0 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 40px;
+
+    @media (min-width: 960px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__title {
+    align-items: center;
+    color: $color_grey_light;
+    display: inline-flex;
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: $color_grey_light;
+    display: inline-flex;
+    height: 20px;
+    margin-right: 10px;
+    min-width: 20px;
+    width: 20px;
+  }
+
+  &__iconHelpWrap {
+    display: inline-flex;
+    position: relative;
+
+    @media (min-width: 960px) {
+      margin-right: 20px;
+    }
+  }
+
+  &__iconHelp {
+    fill: $color_grey_light;
+  }
+
+  &__notification {
+    z-index: 2;
+  }
+
+  &__filter {
+    margin-top: 10px;
+    width: 100%;
+
+    @media (min-width: 960px) {
+      margin-top: 0;
+    }
+  }
+}

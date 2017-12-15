@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-html, html5, website, web</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Types-Icons" transform="translate(-278.000000, -252.000000)">
+            <g id="icn-html,-html5,-website,-web" transform="translate(278.000000, 252.000000)">
+                <rect id="bg" fill="#DDE3E6" x="0" y="0" width="30" height="30" rx="3"></rect>
+                <polygon id="Shape" fill="#E44D26" points="7.66371429 23.0037379 6.0313022 5.03009709 23.9686978 5.03009709 22.3345549 23.0009223 14.989022 25"></polygon>
+                <polygon id="Shape" fill="#F16529" points="15 23.4719903 20.9355495 21.8566019 22.332033 6.49970874 15 6.49970874"></polygon>
+                <polygon id="Shape" fill="#EBEBEB" points="15 13.1658738 12.0285165 13.1658738 11.8232967 10.9085437 15 10.9085437 15 8.70412621 14.9922363 8.70412621 9.36916484 8.70412621 9.42291758 9.29553398 9.97483516 15.3702427 15 15.3702427"></polygon>
+                <polygon id="Shape" fill="#EBEBEB" points="15 18.8909223 14.9901593 18.8934951 12.4892473 18.2305825 12.3293736 16.4724757 11.1141264 16.4724757 10.0751703 16.4724757 10.3897747 19.9336893 14.9896648 21.187233 15 21.1844175"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="14.9922363 13.1658738 14.9922363 15.3702427 17.7574121 15.3702427 17.4967582 18.2291748 14.9922363 18.892767 14.9922363 21.186165 19.5957857 19.9336893 19.6295604 19.5612621 20.1572473 13.7578155 20.2120385 13.1658738 19.6069121 13.1658738"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="14.9922363 8.70412621 14.9922363 10.0732524 14.9922363 10.9031553 14.9922363 10.9085437 20.4091484 10.9085437 20.4091484 10.9085437 20.4163681 10.9085437 20.4614176 10.4130583 20.5637308 9.29553398 20.6174341 8.70412621"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
