@@ -39,7 +39,7 @@ import './monoicon/reload.svg';
 
 import styles from './Products.pcss';
 
-export class Products extends Component {
+class Products extends Component {
   static contextTypes = {
     t: PropTypes.func,
   };
@@ -90,7 +90,7 @@ export class Products extends Component {
   componentDidMount() {
     const { locationSearch } = this.props;
 
-    this.props.getProducts({ locale: 'en' }).then(() => {
+    if (typeof window.__REDUX_STATE__ === 'undefined') this.props.getProducts({ locale: 'en' }).then(() => {
       const designMin = +locationSearch.designMin || 0;
       const designMax = +locationSearch.designMax || 100;
       const ratingMin = +locationSearch.ratingMin || 0;
@@ -118,6 +118,7 @@ export class Products extends Component {
           },
           isRefresh: true,
         }).then(() => {
+
           this.props.getProducts({
             locale: 'en',
             designFilterInitialValue: {
@@ -138,15 +139,19 @@ export class Products extends Component {
             min: designMin,
             max: designMax,
           });
+
           this.props.setProductsFilter('rating', {
             min: ratingMin,
             max: ratingMax,
           });
+
         });
       } else {
         this.props.getProducts({ locale: 'en' });
       }
     });
+
+    window.__REDUX_STATE__ = undefined;
 
     this.defineDpiMultiplier();
     window.addEventListener('scroll', this.handleWindowScroll);

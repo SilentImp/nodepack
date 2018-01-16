@@ -4,7 +4,8 @@ export default {
   ...common,
   env: 'production',
   monsterURL: '//www.templatemonster.com/',
-  productsServiceURL: '//api.templatemonster.com/products/v1/',
-  ticketsServiceURL: '//api.templatemonster.com/tickets/v1/',
-  uploadsServiceURL: '//api.templatemonster.com/uploads/v1/',
+  productsServiceURL: '//api.templatemonsterdev.com/products/v2/',
+  ticketsServiceURL: '//service-tickets.templatemonsterdev.com/api/v1/',
+  uploadsServiceURL: '//api.templatemonsterdev.com/uploads/v1/',
+  vendorsServiceURL: '//api.templatemonster.com/authors/v1/',
 };

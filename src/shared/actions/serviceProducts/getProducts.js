@@ -53,9 +53,6 @@ export const getProducts = ({
   ratingFilterInitialValue = null,
 }) => async (dispatch, getState) => {
 
-  console.log('dispatch: ', dispatch);
-  console.log('getState: ', getState(), getState().form);
-
   const localeInDBFormat = convertLocaleToDBFormat(locale);
   const currentState = getState();
   const currentStateSearchForm = getState().form.productsSearch;

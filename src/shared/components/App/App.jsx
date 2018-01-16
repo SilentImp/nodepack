@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
 
-import { getTopics, getPlatformTypes } from 'actions';
+// import { getTopics, getPlatformTypes } from 'actions';
 
 export class App extends Component {
   static propTypes = {
@@ -11,8 +11,6 @@ export class App extends Component {
     i18n: PropTypes.shape({
       changeLanguage: PropTypes.func.isRequired,
     }).isRequired,
-    getPlatformTypes: PropTypes.func.isRequired,
-    getTopics: PropTypes.func.isRequired,
     t: PropTypes.func.isRequired,
   }
 
@@ -32,8 +30,6 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    this.props.getTopics();
-    this.props.getPlatformTypes();
   }
 
   onRequestChangeAppLocale = (localeCode = 'en') => {
@@ -46,7 +42,4 @@ export class App extends Component {
   }
 }
 
-export default connect(null, {
-  getTopics,
-  getPlatformTypes,
-})(translate()(App));
+export default connect(null, null)(translate()(App));

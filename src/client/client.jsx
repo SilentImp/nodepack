@@ -12,15 +12,7 @@ import ContextProvider from '../shared/components/ContextProvider/index'
 import stylesMain from '../shared/assets/styles/main.pcss';
 
 const history = createHistory();
-let initialState;
-try {
-  initialState = JSON.parse(window.__REDUX_STATE__);
-} catch (error) {
-  initialState = {};
-}
-console.log('__REDUX_STATE__: ', window.__REDUX_STATE__);
-console.log('initialState: ', initialState);
-const store = configureStore(initialState , history);
+const store = configureStore(window.__REDUX_STATE__, history);
 
 const context = {
   insertCss: (...styles) => {

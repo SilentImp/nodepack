@@ -6,4 +6,5 @@ export default {
   monsterURL: '//www.templatemonsterdev.com/',
   productsServiceURL: '//api.templatemonsterdev.com/products/v2/',
   ticketsServiceURL: '//service-tickets.templatemonsterdev.com/api/v1/',
+  vendorsServiceURL: '//api.templatemonster.com/authors/v1/',
 };

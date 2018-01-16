@@ -45,6 +45,7 @@ const initialState = {
 
 export const filter = (state = {}, action) => {
   switch (action.type) {
+
     case types.SET_PRODUCTS_FILTER:
       if (state.name !== action.payload.filterName) {
         return {
@@ -134,6 +135,22 @@ export const product = (state = {}, action) => {
 
 const products = (state = initialState, action) => {
   switch (action.type) {
+
+    case types.SET_PRODUCTS_FILTER_DEFAULT:
+      return {
+        ...state,
+        filters: state.filters.map((item) => {
+          if (item.name !== action.payload.filterName) return item;
+          return {
+            name: action.payload.filterName,
+            min: 0,
+            max: 100,
+            value: action.payload.value,
+            active: true,
+          }
+        })
+      };
+
     case types.GET_PRODUCTS_REQUEST:
       return {
         ...state,

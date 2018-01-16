@@ -12,8 +12,17 @@ export const addProductsFilter = (filterName, value) => ({
   },
 });
 
+export const setDefaultValue = (filterName, value) => ({
+  type: types.SET_PRODUCTS_FILTER_DEFAULT,
+  payload: {
+    filterName,
+    value,
+  },
+});
+
 export const setProductsFilter = (filterName, value) => (dispatch, getState) => {
   const currentState = getState();
+
   const location = getRouterLocation(currentState);
 
   const valueForURL = {
