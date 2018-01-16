@@ -10,7 +10,7 @@ module.exports = {
     client: [
       'babel-polyfill',
       'react-hot-loader/patch',
-      'webpack-dev-server/client?https://0.0.0.0:8080',
+      'webpack-dev-server/client?https://127.0.0.1:8090',
       './src/client/client.jsx'
     ]
   },
@@ -18,8 +18,8 @@ module.exports = {
     hot: true,
     inline: true,
     contentBase: ['/', path.join(projectPath, "build"), path.join(projectPath, "src/static")],
-    port: 8080,
-    host: '0.0.0.0',
+    port: 8090,
+    host: '127.0.0.1',
     compress: true,
     historyApiFallback: true,
     disableHostCheck: true,

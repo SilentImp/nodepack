@@ -1,8 +1,4 @@
 import * as types from 'types/';
-import { normalize, schema } from 'normalizr';
-
-const vendorSchema = new schema.Entity('vendor');
-const vendorsListSchema = new schema.Array(vendorSchema);
 
 const meta = {
   currentPageIndex: 0,
@@ -35,7 +31,6 @@ export const vendors = (previousState = meta, action) => {
       };
 
     case types.GET_VENDORS_SUCCESS:
-      console.log(normalize(action.payload.items, vendorsListSchema));
       return {
         ...previousState,
         isFetching: false,
@@ -44,7 +39,7 @@ export const vendors = (previousState = meta, action) => {
         currentPageIndex: action.payload.currentPageIndex,
         lastPageIndex: action.payload.pageCount,
         totalCount: action.payload.totalCount,
-        items: normalize(action.payload.items, vendorsListSchema)
+        items: previousState.items.concat(action.payload.items.result)
       };
 
     default:
